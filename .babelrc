@@ -1,0 +1,35 @@
+{
+  "presets": [ // preset arr that is required
+    [ // for babel-preset-env package
+      "@babel/env", { // npm-package
+        "useBuiltIns" : "usage",
+        "corejs" : "3",
+        "targets" : { // target obj
+          "browsers" : [ // arr
+            "last 5 versions",
+            "ie >= 8"
+          ]
+        }
+      }
+    ]
+  ]
+}
+
+
+/* --- Initial Config --- */
+/*
+{
+  "presets": [ // preset arr that is required
+    [ // for babel-preset-env package
+      "env", { // npm-package
+        "targets" : { // target obj
+          "browsers" : [ // arr
+            "last 5 versions",
+            "ie >= 8"
+          ]
+        }
+      }
+    ]
+  ]
+}
+*/

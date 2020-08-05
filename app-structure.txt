@@ -1,63 +1,63 @@
 
-	FORKIFY
-	-------
+  FORKIFY
+  -------
 
-	- 3rd Party API : fx-test using axios
-
-
-	- STATE
-		-----
-		1. Global State Management
-				- Search
-				- Recipe
-				- List
-				- Likes
+  - 3rd Party API : fx-test using axios
 
 
-	- SEARCH
-		------
-		1. Data Model : query, results from Search API through axios
-		2. Controller : get query -> init. search -> clear UI -> search API -> await results -> render UI
-		3. HTML Views :	getInput, clearInput, clearResults, renderRecipe, renderResults
-		4. Enhance UI : limRecipe, Pagination - slice, buttons, event listeners, highlight
+  - STATE
+    -----
+    1. Global State Management
+        - Search
+        - Recipe
+        - List
+        - Likes
 
 
-	- RECIPE
-		------
-		1. Data Model : id, recipe from GET API through axios, title, author, image, url, ingred, timing, serving
-		2. Controller : get ID -> prepare UI -> init. recipe -> recipe API -> await results -> calc time/serve -> render UI
-		3. HTML Views :	getHash, renderRecipe, createIngred, clearRecipe, frmtCount using fractional
-		4. Ingredient : quant, unit, descr, parseIngred -> uniform ingredObj, updateServings, updateIngred
+  - SEARCH
+    ------
+    1. Data Model : query, results from Search API through axios
+    2. Controller : get query -> init. search -> clear UI -> search API -> await results -> render UI
+    3. HTML Views :	getInput, clearInput, clearResults, renderRecipe, renderResults
+    4. Enhance UI : limRecipe, Pagination - slice, buttons, event listeners, highlight
 
 
-	- LIST
-		----
-		1. Data Model : items, addItem, id from uniqid, deleteItem, updateCount
-		2. Controller : init List -> add Items -> render Items on UI
-		3. HTML Views : renderItem, deleteItem
+  - RECIPE
+    ------
+    1. Data Model : id, recipe from GET API through axios, title, author, image, url, ingred, timing, serving
+    2. Controller : get ID -> prepare UI -> init. recipe -> recipe API -> await results -> calc time/serve -> render UI
+    3. HTML Views :	getHash, renderRecipe, createIngred, clearRecipe, frmtCount using fractional
+    4. Ingredient : quant, unit, descr, parseIngred -> uniform ingredObj, updateServings, updateIngred
 
 
-	- LIKES
-		-----
-		1. Data Model : likes, addLike, deleteLike, isLiked, getNumLikes
-		2. Controller : init Like -> check isLiked -> add/del like -> toggle likeBtn -> add/del from UI
-		3. HTML Views : toggleLikeBtn, toggleLikeMenu, renderLike, deleteLike
-		4. Data Store : persistData and readStorage from localStorage
+  - LIST
+    ----
+    1. Data Model : items, addItem, id from uniqid, deleteItem, updateCount
+    2. Controller : init List -> add Items -> render Items on UI
+    3. HTML Views : renderItem, deleteItem
 
 
-	- BASE
-		----
-		1. DOM Strings for class names
-		2. Loading Spinner for AJAX calls
+  - LIKES
+    -----
+    1. Data Model : likes, addLike, deleteLike, isLiked, getNumLikes
+    2. Controller : init Like -> check isLiked -> add/del like -> toggle likeBtn -> add/del from UI
+    3. HTML Views : toggleLikeBtn, toggleLikeMenu, renderLike, deleteLike
+    4. Data Store : persistData and readStorage from localStorage
 
 
-	- EVENTS
-		------
-		1. Add Event Listeners
-				- search : submit
-				- pageBtns : click
-				- recipe : hashchange
-				- recipe : load
-				- recipeBtns : click [dec-serve, inc-serve, list-add, like-add]
-				- shopList : click [del-item, upd-count]
-				- window : load
+  - BASE
+    ----
+    1. DOM Strings for class names
+    2. Loading Spinner for AJAX calls
+
+
+  - EVENTS
+    ------
+    1. Add Event Listeners
+        - search : submit
+        - pageBtns : click
+        - recipe : hashchange
+        - recipe : load
+        - recipeBtns : click [dec-serve, inc-serve, list-add, like-add]
+        - shopList : click [del-item, upd-count]
+        - window : load
